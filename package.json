@@ -1,19 +1,23 @@
 {
-  "name": "github-actions-activity",
+  "name": "github-actions-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "webpack public/scripts/github-actions-activity.js -o public/bundle.js",
+    "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/airbrb/github-actions-activity.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/airbrb/github-actions-activity/issues"
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   },
-  "homepage": "https://github.com/airbrb/github-actions-activity#readme"
+  "dependencies": {
+    "firebase-tools": "^7.14.0",
+    "terser": "^4.6.6"
+  }
 }
