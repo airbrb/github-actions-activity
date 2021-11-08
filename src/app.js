@@ -19,6 +19,6 @@ function addZero(num){
 }
 
 let time = `${hours}:${minutes}:${seconds} ${ampm}`
-document.getElementById('time').innerText=time;
+document.getElementById('time').innerHTML=time;
 
 exports.time = time;
