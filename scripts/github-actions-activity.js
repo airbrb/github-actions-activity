@@ -10,8 +10,15 @@ if (hours < 12){
 if (hours == 0){
     hours = hours + 12
 }
-let minutes = today.getMinutes();
-let seconds = today.getSeconds();
+hours = addZero(hours)
+let minutes = addZero(today.getMinutes());
+let seconds = addZero(today.getSeconds());
 
-let time = `${hours}:${minutes}:${seconds}:${ampm}`
+function addZero(num){
+    return num < 10 ? `0${num}`:num;
+}
+
+let time = `${hours}:${minutes}:${seconds} ${ampm}`
 document.getElementById('date-time').innerText=time;
+
+exports.time = time;
