@@ -1,4 +1,4 @@
-const { time } = require("./github-actions-activity");
+const { time } = require("./app.js");
 
 
 test("time always has the format 'HH:MM:SS *M'", () => {
